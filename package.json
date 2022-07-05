@@ -1,8 +1,8 @@
 {
-  "name": "stanstrong-AERO",
+  "name": "standstrong",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "stanstrong-AERO",
+  "productName": "standstrong",
   "author": "basanta-afk <basantabhusan@outlook.com>",
   "private": true,
   "scripts": {

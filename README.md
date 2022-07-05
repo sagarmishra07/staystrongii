@@ -1,4 +1,4 @@
-# Quasar App (stanstrong-AERO)
+# Quasar App (standstrong)
 
 A Quasar Framework app
 

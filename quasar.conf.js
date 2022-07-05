@@ -116,9 +116,9 @@ module.exports = configure(function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'stanstrong-AERO',
-        short_name: 'stanstrong-AERO',
-        description: 'stanstrong-AERO is an application for pharmaceuticals',
+        name: 'standstrong',
+        short_name: 'standstrong',
+        description: 'standstrong is an application for pharmaceuticals',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
@@ -181,7 +181,7 @@ module.exports = configure(function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'stanstrong-AERO',
+        appId: 'standstrong',
       },
 
       // More info: https://v1.quasar.dev/quasar-cli/developing-electron-apps/node-integration

@@ -1,0 +1,35 @@
+stages:
+   - build
+   - deployDev
+
+# build stage
+build_app:
+   rules: 
+    - if : ' $CI_COMMIT_BRANCH == "Features/cms" '
+   image: node:16.14.2-alpine3.15
+   stage: build
+   script:
+      - npm install
+      - npm install -g @quasar/cli
+      - quasar build
+   cache:
+     paths:
+       - node_modules/
+   artifacts:
+      paths:
+         # build folder
+         - dist/
+      expire_in: 1 hour
+
+# Development Stage
+dev:
+   rules: 
+    - if : '$CI_COMMIT_BRANCH == "Features/cms"'
+   stage: deployDev
+   before_script:
+      - mkdir -p ~/.ssh
+      - echo -e "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+      - chmod 600 ~/.ssh/id_rsa
+      - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+   script:
+      - scp -r dist/spa/* "$USERNAME"@"$SERVER_IP_ADDRESS":"$PROJECT_ROOT"/"$DEV_URL"/

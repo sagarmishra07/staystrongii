@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// app global css in SCSS form
+
+:root {
+  -bg-dark: #353944;
+  -bg-dark-blue: #484D5F;
+}
+
+body {
+  font-family: "Poppins", "Roboto", 'sans-serif' !important;
+  color: #263238;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #acacac;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.border-radius-sm{
+  border-radius: 15px;
+}
+
+.nepali-date {
+  .datepicker {
+    .calendar {
+      right: 0;
+    }
+
+    input {
+      background: rgba(0, 0, 0, 0.05);
+      border: none;
+      padding-top: 14px;
+      border-radius: 4px;
+      padding-right: 8px;
+      padding-left: 8px;
+      padding-bottom: 2px;
+
+      &:focus, &:active {
+        outline: none;
+        border-bottom: 2px solid #008b8b;
+      }
+    }
+  }
+}
+
+
+.rounded-border {
+  border-radius: 300px !important;
+}
+
+
+.nepali-date-container {
+  border-radius: 4px;
+
+  input {
+    border: none;
+    background: transparent;
+
+    &:focus {
+      outline: none
+    }
+  }
+
+  .calendar {
+    left: unset;
+    right: 0;
+  }
+}
+
+.half-width {
+  width: 50%;
+}
+
+.half-height {
+  height: 50%;
+}
+
+.text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.body--dark {
+  .bg-darkTheme {
+    background-color: #353944 !important;
+  }
+
+  .bg-darkBlueTheme {
+    background-color: #484D5F !important;
+  }
+
+  .bg-grey-2 {
+    background-color: #353944 !important;
+  }
+
+  .text-primary {
+    color: #6B9AC4 !important;
+  }
+
+
+}
